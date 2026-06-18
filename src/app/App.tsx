@@ -17,7 +17,6 @@ import { AIAssistant } from "./components/AIAssistant";
 import { Sparkles } from "lucide-react";
 import { PlayerProvider } from "./player/PlayerContext";
 import { AuthProvider, useAuth } from "./auth/AuthContext";
-import { AuthScreen } from "./components/AuthScreen";
 import "../styles/fonts.css";
 
 /* MARKER-MAKE-KIT-INVOKED */
@@ -59,23 +58,10 @@ interface NavState {
 export default function App() {
   return (
     <AuthProvider>
-      <AuthGate />
+      <PlayerProvider>
+        <MusicApp />
+      </PlayerProvider>
     </AuthProvider>
-  );
-}
-
-// Renders the auth screen until an account session exists; only then mounts the
-// player engine + app shell.
-function AuthGate() {
-  const { user, ready } = useAuth();
-  if (!ready) {
-    return <div className="h-dvh w-screen" style={{ background: "var(--background)" }} />;
-  }
-  if (!user) return <AuthScreen />;
-  return (
-    <PlayerProvider>
-      <MusicApp />
-    </PlayerProvider>
   );
 }
 

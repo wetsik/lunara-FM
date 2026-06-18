@@ -35,6 +35,12 @@ const AuthContext = createContext<AuthState | null>(null);
 
 const ACCOUNTS_KEY = "lunaraAccounts";
 const SESSION_KEY = "lunaraSession";
+const GUEST_USER: Account = {
+  id: "guest-lunara",
+  name: "Lunara Guest",
+  email: "guest@lunara.fm",
+  createdAt: "2026-06-18T00:00:00.000Z",
+};
 
 function randomSalt(): string {
   const a = new Uint8Array(16);
@@ -89,7 +95,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const user = useMemo(() => {
     const found = accounts.find(a => a.id === currentId);
-    return found ? publicView(found) : null;
+    return found ? publicView(found) : GUEST_USER;
   }, [accounts, currentId]);
 
   const signUp = async (name: string, email: string, password: string): Promise<AuthResult> => {
