@@ -46,9 +46,12 @@
   --glass-hover: rgba(255, 255, 255, 0.08);
   --emerald: #F5F5F5;
   --emerald-dim: rgba(255, 255, 255, 0.14);
-  --emerald-glow: rgba(255, 255, 255, 0.34);
-  --brand-glow-soft: rgba(255, 255, 255, 0.12);
-  --brand-glow-strong: rgba(255, 255, 255, 0.42);
+  --emerald-glow: rgba(220, 232, 255, 0.14);
+  --moon-glow-soft: rgba(220, 232, 255, 0.1);
+  --moon-glow-medium: rgba(244, 247, 255, 0.14);
+  --moon-glow-violet: rgba(190, 176, 255, 0.08);
+  --brand-glow-soft: var(--moon-glow-soft);
+  --brand-glow-strong: var(--moon-glow-medium);
   --brand-on-accent: #050505;
   --surface-1: #0C0C0E;
   --surface-2: #141416;
@@ -217,35 +220,42 @@
 
 @layer components {
   .brand-glow {
-    filter: drop-shadow(0 0 12px var(--brand-glow-soft));
     box-shadow:
-      0 0 18px var(--brand-glow-strong),
-      0 0 42px var(--brand-glow-soft),
-      inset 0 0 14px rgba(255, 255, 255, 0.18);
+      0 0 28px var(--moon-glow-medium),
+      0 0 68px var(--moon-glow-soft),
+      inset 0 0 12px rgba(255, 255, 255, 0.1);
   }
 
   .brand-wordmark {
-    text-shadow:
-      0 0 18px var(--brand-glow-soft),
-      0 0 34px rgba(255, 255, 255, 0.08);
+    text-shadow: none;
   }
 
   .brand-text-glow {
-    text-shadow:
-      0 0 12px rgba(255, 255, 255, 0.42),
-      0 0 28px rgba(255, 255, 255, 0.14);
+    text-shadow: none;
   }
 
   .brand-number-glow {
-    text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.55),
-      0 0 22px rgba(255, 255, 255, 0.2);
+    text-shadow: none;
   }
 
   .brand-avatar-glow {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
     box-shadow:
-      0 0 14px rgba(255, 255, 255, 0.38),
-      0 0 30px rgba(255, 255, 255, 0.12);
+      0 0 20px rgba(220, 232, 255, 0.08),
+      0 0 42px rgba(190, 176, 255, 0.04);
+  }
+
+  .moon-hover-glow {
+    transition:
+      box-shadow 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .moon-hover-glow:hover {
+    border-color: rgba(244, 247, 255, 0.18) !important;
+    box-shadow:
+      0 0 34px var(--moon-glow-soft),
+      0 0 72px var(--moon-glow-violet);
   }
 }

@@ -96,7 +96,7 @@ export function AlbumPage({ onNavigate, onBack, album }: AlbumPageProps) {
                 onClick={playAll}
                 disabled={!tracks.length}
                 className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all active:scale-95 disabled:opacity-50"
-                style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 4px 20px var(--emerald-glow)" }}
+                style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 0 28px var(--moon-glow-soft)" }}
               >
                 <Play size={14} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" />
                 Слушать

@@ -103,7 +103,7 @@ export function MusicPlayer({ onNavigate }: MusicPlayerProps) {
             className="brand-glow w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95"
             style={{
               background: "var(--emerald)",
-              boxShadow: isPlaying ? "0 0 20px var(--emerald-glow)" : "none",
+              boxShadow: isPlaying ? "0 0 26px var(--moon-glow-medium), 0 0 64px var(--moon-glow-soft)" : "none",
             }}
           >
             {isPlaying ? <Pause size={16} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" /> : <Play size={16} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: "2px" }} />}
@@ -138,7 +138,7 @@ export function MusicPlayer({ onNavigate }: MusicPlayerProps) {
                 style={{
                   width: `${progress}%`,
                   background: "var(--emerald)",
-                  boxShadow: "0 0 6px var(--emerald-glow)",
+                  boxShadow: isPlaying ? "0 0 12px var(--moon-glow-soft)" : "none",
                 }}
               />
             </div>

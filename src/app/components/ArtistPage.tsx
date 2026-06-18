@@ -92,7 +92,7 @@ export function ArtistPage({ onNavigate, onBack, artist }: ArtistPageProps) {
             disabled={!tracks.length}
             onClick={() => tracks.length && play(tracks[0], tracks)}
             className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all active:scale-95 disabled:opacity-50"
-            style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 4px 20px var(--emerald-glow)" }}
+            style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 0 28px var(--moon-glow-soft)" }}
           >
             <Play size={14} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" />
             Слушать
@@ -189,7 +189,7 @@ export function ArtistPage({ onNavigate, onBack, artist }: ArtistPageProps) {
                     <img src={album.cover} alt={album.title} className="w-full aspect-square rounded-2xl object-cover" />
                     <div
                       className="absolute bottom-2 right-2 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
-                      style={{ background: "var(--emerald)", boxShadow: "0 4px 16px var(--emerald-glow)" }}
+                      style={{ background: "var(--emerald)", boxShadow: "0 0 24px var(--moon-glow-soft)" }}
                     >
                       <Play size={14} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: 2 }} />
                     </div>

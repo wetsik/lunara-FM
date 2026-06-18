@@ -34,12 +34,12 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
       {/* Logo */}
       <div className="flex items-center gap-3 px-5 py-5">
         <div
-          className="brand-glow w-8 h-8 rounded-lg flex items-center justify-center"
-          style={{ background: "var(--emerald)", boxShadow: "0 0 16px var(--emerald-glow)" }}
+          className="w-8 h-8 rounded-lg flex items-center justify-center"
+          style={{ background: "var(--emerald)" }}
         >
           <Zap size={16} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" />
         </div>
-        <span className="brand-wordmark text-[15px] font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>
+        <span className="text-[15px] font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>
           Lunara
         </span>
       </div>

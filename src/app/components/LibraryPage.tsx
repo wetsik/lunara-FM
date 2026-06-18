@@ -104,7 +104,7 @@ export function LibraryPage({ onNavigate, mode = "library" }: LibraryPageProps) 
                 >
                   {pl.pinned ? <PinOff size={13} color="var(--brand-on-accent)" /> : <Pin size={13} color="#fff" />}
                 </button>
-                <button className="absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all" style={{ background: "var(--emerald)", boxShadow: "0 4px 16px var(--emerald-glow)" }}>
+                <button className="absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all" style={{ background: "var(--emerald)", boxShadow: "0 0 24px var(--moon-glow-soft)" }}>
                   <Play size={13} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: "2px" }} />
                 </button>
               </div>

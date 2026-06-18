@@ -184,7 +184,7 @@ function MusicApp() {
             style={{
               bottom: "calc(env(safe-area-inset-bottom, 0px) + 132px)",
               background: "var(--emerald)",
-              boxShadow: "0 6px 24px var(--emerald-glow)",
+              boxShadow: "0 0 34px var(--moon-glow-medium), 0 0 78px var(--moon-glow-soft)",
             }}
             aria-label="AI-подборщик"
           >
@@ -411,7 +411,7 @@ function ToggleSwitch({ settingKey, defaultOn }: { settingKey?: string; defaultO
         background: enabled ? "var(--emerald)" : "var(--glass-hover)",
         width: "40px",
         height: "22px",
-        boxShadow: enabled ? "0 0 10px var(--emerald-glow)" : "none",
+        boxShadow: enabled ? "0 0 18px var(--moon-glow-soft)" : "none",
       }}
     >
       <span

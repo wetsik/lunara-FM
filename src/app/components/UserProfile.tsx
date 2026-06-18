@@ -88,7 +88,7 @@ export function UserProfile({ onNavigate }: UserProfileProps) {
             ) : (
               <div
                 className="h-24 w-24 rounded-3xl flex items-center justify-center text-3xl font-bold sm:h-28 sm:w-28"
-                style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 12px 40px var(--emerald-glow)" }}
+                style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 0 30px var(--moon-glow-soft)" }}
               >
                 {initials(user.name)}
               </div>
@@ -251,7 +251,7 @@ export function UserProfile({ onNavigate }: UserProfileProps) {
                         <Music2 size={28} style={{ color: "var(--emerald)" }} />
                       </div>
                     )}
-                    <button className="absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all" style={{ background: "var(--emerald)", boxShadow: "0 4px 16px var(--emerald-glow)" }}>
+                    <button className="absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all" style={{ background: "var(--emerald)", boxShadow: "0 0 24px var(--moon-glow-soft)" }}>
                       <Play size={13} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: "2px" }} />
                     </button>
                   </div>

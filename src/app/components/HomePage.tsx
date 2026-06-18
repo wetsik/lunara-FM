@@ -98,10 +98,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <div className="mb-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="brand-text-glow text-xs font-medium mb-1" style={{ color: "var(--emerald)" }}>
+            <p className="text-xs font-medium mb-1" style={{ color: "var(--emerald)" }}>
               {greeting} ✦
             </p>
-            <h1 className="brand-text-glow text-2xl font-bold tracking-tight sm:text-3xl" style={{ color: "var(--text-primary)", letterSpacing: "-0.03em" }}>
+            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl" style={{ color: "var(--text-primary)", letterSpacing: "-0.03em" }}>
               Welcome back
             </h1>
             <p className="mt-1 text-sm" style={{ color: "var(--text-muted)" }}>
@@ -113,17 +113,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
             style={{ background: "var(--glass-bg)", border: "1px solid var(--glass-border)" }}
           >
             <div className="text-center">
-              <p className="brand-number-glow text-lg font-bold" style={{ color: "var(--text-primary)" }}>{liked.length}</p>
+              <p className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>{liked.length}</p>
               <p className="text-xs" style={{ color: "var(--text-muted)" }}>Liked</p>
             </div>
             <div className="hidden h-8 w-px md:block" style={{ background: "var(--glass-border)" }} />
             <div className="text-center">
-              <p className="brand-number-glow text-lg font-bold" style={{ color: "var(--text-primary)" }}>{playlists.length}</p>
+              <p className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>{playlists.length}</p>
               <p className="text-xs" style={{ color: "var(--text-muted)" }}>Playlists</p>
             </div>
             <div className="hidden h-8 w-px md:block" style={{ background: "var(--glass-border)" }} />
             <div className="text-center">
-              <p className="brand-number-glow text-lg font-bold" style={{ color: "var(--emerald)" }}>{history.length}</p>
+              <p className="text-lg font-bold" style={{ color: "var(--emerald)" }}>{history.length}</p>
               <p className="text-xs" style={{ color: "var(--text-muted)" }}>Played</p>
             </div>
           </div>
@@ -132,7 +132,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         {/* Smart mix — a personalized shuffle from your taste */}
         <button
           onClick={playSmartMix}
-          className="mt-4 flex w-full items-center gap-3 rounded-2xl px-5 py-4 text-left transition-all active:scale-[0.99] sm:w-auto"
+          className="moon-hover-glow mt-4 flex w-full items-center gap-3 rounded-2xl px-5 py-4 text-left transition-all active:scale-[0.99] sm:w-auto"
           style={{
             background: "var(--glass-bg)",
             border: "1px solid var(--glass-border)",
@@ -163,7 +163,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div
                   key={track.id}
                   onClick={() => play(track, recent)}
-                  className="flex min-w-0 items-center gap-3 rounded-xl px-3 py-2.5 cursor-pointer transition-all duration-150 group"
+                  className="moon-hover-glow flex min-w-0 items-center gap-3 rounded-xl px-3 py-2.5 cursor-pointer transition-all duration-150 group"
                   style={{ background: "var(--surface-1)", border: "1px solid var(--glass-border)" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "var(--surface-2)")}
                   onMouseLeave={e => (e.currentTarget.style.background = "var(--surface-1)")}
@@ -199,7 +199,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 return (
                   <div
                     key={track.id}
-                    className="w-36 shrink-0 cursor-pointer group sm:w-40 lg:w-44"
+                    className="moon-hover-glow w-36 shrink-0 cursor-pointer rounded-2xl p-1 group sm:w-40 lg:w-44"
                     onClick={() => playStation(track)}
                   >
                     <div className="relative mb-3">
@@ -212,7 +212,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       </div>
                       <button
                         className="absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 active:scale-95"
-                        style={{ background: "var(--emerald)", boxShadow: "0 4px 16px var(--emerald-glow)" }}
+                        style={{ background: "var(--emerald)", boxShadow: "0 0 24px var(--moon-glow-soft)" }}
                       >
                         <Play size={14} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: "2px" }} />
                       </button>

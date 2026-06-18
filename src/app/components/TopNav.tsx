@@ -89,7 +89,7 @@ export function TopNav({ onNavigate, currentPage }: TopNavProps) {
         <div className="relative">
           <button
             onClick={() => { setOpen(o => !o); setRead(true); }}
-            className="relative w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+            className="moon-hover-glow relative w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
             style={{ background: "var(--glass-bg)", color: open ? "var(--text-primary)" : "var(--text-muted)" }}
             aria-label="Notifications"
           >
@@ -97,7 +97,7 @@ export function TopNav({ onNavigate, currentPage }: TopNavProps) {
             {hasUnread && (
               <span
                 className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full"
-                style={{ background: "var(--emerald)", boxShadow: "0 0 6px var(--emerald-glow)" }}
+                style={{ background: "var(--emerald)", boxShadow: "0 0 10px var(--moon-glow-soft)" }}
               />
             )}
           </button>
@@ -133,14 +133,14 @@ export function TopNav({ onNavigate, currentPage }: TopNavProps) {
         {/* User avatar */}
         <button
           onClick={() => onNavigate("profile")}
-          className="hidden items-center gap-2 rounded-xl py-1 pl-1 pr-3 sm:flex"
+          className="moon-hover-glow hidden items-center gap-2 rounded-xl py-1 pl-1 pr-3 sm:flex"
           style={{ background: "var(--glass-bg)", border: "1px solid var(--glass-border)" }}
         >
           {user?.avatar ? (
-            <img src={user.avatar} alt={user.name} className="brand-avatar-glow w-6 h-6 rounded-lg object-cover" />
+            <img src={user.avatar} alt={user.name} className="w-6 h-6 rounded-lg object-cover" />
           ) : (
             <div
-              className="brand-avatar-glow w-6 h-6 rounded-lg flex items-center justify-center text-[11px] font-bold"
+              className="w-6 h-6 rounded-lg flex items-center justify-center text-[11px] font-bold"
               style={{ background: "var(--emerald)", color: "var(--brand-on-accent)" }}
             >
               {user ? avatarInitials(user.name) : "?"}

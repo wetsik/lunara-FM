@@ -208,14 +208,14 @@ export function FullscreenPlayer({ onNavigate, onBack }: FullscreenPlayerProps) 
                     style={{
                       width: `${progress}%`,
                       background: "linear-gradient(90deg, var(--emerald), #d7d7d7)",
-                      boxShadow: "0 0 12px var(--emerald-glow)",
+                      boxShadow: isPlaying ? "0 0 16px var(--moon-glow-soft)" : "none",
                     }}
                   />
                 </div>
                 {/* Draggable thumb (appears on hover) */}
                 <div
                   className="absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full opacity-0 transition-opacity group-hover:opacity-100"
-                  style={{ left: `calc(${progress}% - 6px)`, background: "#fff", boxShadow: "0 0 10px var(--emerald-glow)" }}
+                  style={{ left: `calc(${progress}% - 6px)`, background: "#fff", boxShadow: isPlaying ? "0 0 14px var(--moon-glow-soft)" : "none" }}
                 />
                 <input
                   type="range" min={0} max={duration || 0} step={0.5} value={currentTime}
@@ -246,7 +246,7 @@ export function FullscreenPlayer({ onNavigate, onBack }: FullscreenPlayerProps) 
               <button
                 onClick={togglePlay}
                 className="brand-glow w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95"
-                style={{ background: "var(--emerald)", boxShadow: "0 0 30px var(--emerald-glow)" }}
+                style={{ background: "var(--emerald)", boxShadow: isPlaying ? "0 0 34px var(--moon-glow-medium), 0 0 78px var(--moon-glow-soft)" : "none" }}
               >
                 {isPlaying ? <Pause size={22} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" /> : <Play size={22} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" style={{ marginLeft: "3px" }} />}
               </button>

@@ -168,7 +168,7 @@ export function AIAssistant({ onClose }: AIAssistantProps) {
                     <button
                       onClick={() => play(msg.tracks![0], msg.tracks!)}
                       className="flex-1 py-2 rounded-xl text-xs font-semibold transition-all"
-                      style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 4px 12px var(--emerald-glow)" }}
+                      style={{ background: "var(--emerald)", color: "var(--brand-on-accent)", boxShadow: "0 0 24px var(--moon-glow-soft)" }}
                     >
                       Включить
                     </button>

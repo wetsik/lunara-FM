@@ -102,7 +102,7 @@ export function PremiumPage({ onNavigate }: PremiumPageProps) {
         <div className="flex items-center justify-center gap-2 mb-4 mt-10 sm:mt-8">
           <div
             className="brand-glow w-10 h-10 rounded-2xl flex items-center justify-center"
-            style={{ background: "var(--emerald)", boxShadow: "0 0 24px var(--emerald-glow)" }}
+            style={{ background: "var(--emerald)", boxShadow: "0 0 28px var(--moon-glow-soft)" }}
           >
             <Zap size={20} color="var(--brand-on-accent)" fill="var(--brand-on-accent)" />
           </div>
@@ -157,7 +157,7 @@ export function PremiumPage({ onNavigate }: PremiumPageProps) {
                   background: selected === plan.id ? "var(--emerald)" : plan.popular ? "var(--emerald)" : "var(--glass-bg)",
                   color: selected === plan.id || plan.popular ? "var(--brand-on-accent)" : "var(--text-secondary)",
                   border: plan.popular || selected === plan.id ? "none" : "1px solid var(--glass-border)",
-                  boxShadow: plan.popular || selected === plan.id ? "0 4px 16px var(--emerald-glow)" : "none",
+                  boxShadow: plan.popular || selected === plan.id ? "0 0 24px var(--moon-glow-soft)" : "none",
                 }}
               >
                 {selected === plan.id ? <><Check size={14} /> Текущий план</> : plan.popular ? "Get Pro" : "Choose Plan"}
